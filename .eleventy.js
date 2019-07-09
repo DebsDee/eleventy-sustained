@@ -2,7 +2,7 @@ const { DateTime } = require("luxon");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
 
@@ -12,10 +12,10 @@ module.exports = function(eleventyConfig) {
   });
 
   // only content in the `posts/` directory
-  eleventyConfig.addCollection("posts", function(collection) {
-    return collection.getAllSorted().filter(function(item) {
+  eleventyConfig.addCollection("posts", function (collection) {
+    return collection.getAllSorted().filter(function (item) {
       return item.inputPath.match(/^\.\/posts\//) !== null;
-    });
+    }).reverse();
   });
 
   eleventyConfig.addPassthroughCopy("static");

@@ -108,6 +108,8 @@ body {
  height: auto;
  max-width: 100%;
 }
+
+
 .panel-default h4 {
   text-align: left;
   line-height: 1.25;
@@ -144,6 +146,11 @@ pre[class*="language-"] {
 .social h4 > a {
   color: #000000;
 }
+
+.contact h4 > a {
+  font-size: 30px;
+}
+
 .avatar {
   padding-top: 5%;
 }

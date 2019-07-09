@@ -1,0 +1,29 @@
+---
+layout: layouts/base.html
+title: Resume
+---
+
+<section id="resume">
+  <div class="container">
+    <h1>Resume</h1>
+    <div class="panel panel-default">
+      <div class="panel-body project-list">
+        <h2>Career Summary</h2>
+
+        <p>{{ resume.summary }}</p>
+        <h3>{{ resume.experience.title[0] }}</h3>
+
+        <ul>
+          <li>{{ resume.detail }}</li>
+        </ul>
+        <h3>{{ resume.experience.title[1] }}</h3>
+
+        <ul>
+          <li>{{ resume.detail }}</li>
+        </ul>
+
+        {{ endof }}
+      </div>
+    </div>
+  </div>
+</section>
